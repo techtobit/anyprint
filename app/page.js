@@ -226,7 +226,7 @@ export default function Home() {
       {/* Other Services */}
       <main id="services" data-animate
         style={{
-          backgroundImage: "linear-gradient(to bottom, rgba(240, 253, 250, 0.98), rgba(204, 251, 241, 0.95)), url('/dubai_bg.svg')",
+          backgroundImage: "linear-gradient(to bottom, rgba(240, 253, 250, 0.98), rgba(204, 251, 241, 0.76)), url('/prints.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

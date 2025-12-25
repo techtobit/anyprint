@@ -9,14 +9,14 @@ const inter = Inter({
 
 
 export const metadata = {
-  title: "Stamp Sells and Collection in United Arab Emirates(UAE)",
-  description: "Discover rare collectible stamps with detailed previews.",
-  keywords: ["stamps", "collectibles", "rare stamps", "philately"],
+  title: "All print services in United Arab Emirates(UAE)",
+  description: "Discover rare collectible new landscape.",
+  keywords: ["Business cards, bill books, T-shirts, leaflets, banners, gold foiling, stickers, diaries, boxes, signboards, screen & digital printing, labels, offset and shopping bags printing services in UAE."],
   openGraph: {
-    title: "Rare Stamp Collection",
+    title: "Rare Print Services in UAE",
     description: "An exclusive online portfolio of collectible stamps.",
     url: "https://www.mystampsite.com",
-    siteName: "Stamp Portfolio",
+    siteName: "anyprint",
     images: [
       {
         url: "/og-image.png",
