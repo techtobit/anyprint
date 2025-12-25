@@ -1,0 +1,58 @@
+[
+	{
+		"name": "Classic UAE Stamp",
+		"size": "40x40mm",
+		"type": "Commemorative",
+		"image": "image/stamp01.jpg"
+	},
+	{
+		"name": "Hand Bag Logo",
+		"price": 30.0,
+		"size": "45x45mm",
+		"type": "Paper Bag Series",
+		"image": "image/hand_bag_logo.webp"
+	},
+	{
+		"name": "Hand Bag Jute",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Jute Bag Series",
+		"image": "image/hand_bag.webp"
+	},
+	{
+		"name": "Custom Mug",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "white Mug Series",
+		"image": "image/mug_logo.webp"
+	},
+	{
+		"name": "Office Pad Bottle",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Special Edition",
+		"image": "/image/pad_bottal.webp"
+	},
+	{
+		"name": "Stand Banner",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Special Edition",
+		"image": "image/stand_banner.webp"
+	},
+	{
+		"name": "offical T-Shirt",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Special Edition",
+		"image": "/image/tshirt.webp"
+	},
+	{
+		"name": "Stiker Banner",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Special Edition",
+		"image": "image/car_stiker.webp"
+	}
+
+]
