@@ -32,7 +32,7 @@ export default function Home() {
 
   // simple translations
   const t = {
-    brand: { en: 'Emirates Printworks', ar: 'الإمارات للطباعة' },
+    brand: { en: 'AnyPrint - Emirates', ar: 'أني برينت - الإمارات' },
     nav: { en: ['Home', 'Services', 'Products', 'Contact', 'WhatsApp'], ar: ['الرئيسية', 'الخدمات', 'المنتجات', 'اتصل', 'واتساب'] },
     heroTag: { en: 'Business Printing · Packaging · Branding', ar: 'الطباعة التجارية · التغليف · العلامة التجارية' },
     heroTitle: { en: 'End-to-end Printing Solutions for Businesses', ar: 'حلول الطباعة المتكاملة للشركات' },
