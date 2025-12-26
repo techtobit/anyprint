@@ -129,9 +129,7 @@ export default function Home() {
     const message = `Hello, I am interested in:
   Image: ${image}
   Name: ${name}
-  Size: ${size}
   Type: ${type}
-  Price: ${price}
   Please provide more details.`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");

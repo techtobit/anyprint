@@ -15,8 +15,8 @@ export default function Navbar({ t, lang, setLang }) {
 
           <div className="hidden md:flex items-center gap-6">
             <a href="#" className="text-sm font-medium text-gray-700 hover:text-green-700">{t.nav[lang][0]}</a>
-            <a href="#services" className="text-sm font-medium text-gray-700 hover:text-green-700">{t.nav[lang][1]}</a>
             <a href="#products" className="text-sm font-medium text-gray-700 hover:text-green-700">{t.nav[lang][2]}</a>
+            <a href="#services" className="text-sm font-medium text-gray-700 hover:text-green-700">{t.nav[lang][1]}</a>
             <a href="#contact" className="text-sm font-medium text-gray-700 hover:text-green-700">{t.nav[lang][3]}</a>
             <a href={`https://wa.me/971504761587?text=${encodeURIComponent(lang === 'ar' ? 'مرحبًا، أريد عرض سعر لطلبات بالجملة.' : 'Hello, I need a bulk quote for custom stamps.')}`} className="ml-2 inline-flex items-center gap-2 px-3 py-1 rounded-md bg-green-500 text-white text-sm">{t.nav[lang][4]}</a>
 
