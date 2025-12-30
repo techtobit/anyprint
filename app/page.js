@@ -10,8 +10,8 @@ import { useEffect, useState, useRef } from "react";
 import Navbar from "@/components/ui/navbar";
 
 export default function Home() {
-  const [stamps, setStamps] = useState([]);
-  const [services, setServices] = useState([]);
+  const [services, setservices] = useState([]);
+  const [otherservices, setOtherServices] = useState([]);
   const [navOpen, setNavOpen] = useState(false);
   const [openFAQ, setOpenFAQ] = useState(null);
 
@@ -32,7 +32,7 @@ export default function Home() {
 
   // simple translations
   const t = {
-    brand: { en: 'PrimePrint', ar: 'برايم برينت' },
+    brand: { en: 'Prime Print', ar: 'برايم برينت' },
     nav: { en: ['Home', 'Services', 'Products', 'Contact', 'WhatsApp'], ar: ['الرئيسية', 'الخدمات', 'المنتجات', 'اتصل', 'واتساب'] },
     heroTag: { en: 'Business Printing · Packaging · Branding', ar: 'الطباعة التجارية · التغليف · العلامة التجارية' },
     heroTitle: { en: 'End-to-end Printing Solutions for Businesses', ar: 'حلول الطباعة المتكاملة للشركات' },
@@ -63,7 +63,7 @@ export default function Home() {
   // Testimonials slider state
   const testimonials = [
     {
-      quote: "Fast delivery, excellent bulk pricing — our office chain now uses their stamps across all branches.",
+      quote: "Fast delivery, excellent bulk pricing — our office chain now uses their services across all branches.",
       name: "Rashid Ahmed",
       role: "Procurement Manager, Gulf Retail",
       avatar: "https://i.pravatar.cc/150?img=3",
@@ -97,13 +97,13 @@ export default function Home() {
   useEffect(() => {
     fetch("/printservices.json")
       .then((res) => res.json())
-      .then((data) => setStamps(data));
+      .then((data) => setservices(data));
   }, []);
 
   useEffect(() => {
     fetch("/other_services.json")
       .then((res) => res.json())
-      .then((data) => setServices(data));
+      .then((data) => setOtherServices(data));
   }, []);
 
   // lightweight scroll reveal for sections
@@ -144,7 +144,7 @@ export default function Home() {
 
       <style>{`[data-animate]{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1);will-change:opacity,transform}[data-animate].in-view{opacity:1;transform:none}@media (prefers-reduced-motion: reduce){[data-animate]{transition:none;transform:none;opacity:1}}`}</style>
 
-      {/* Centered Professional Hero */}
+      {/* PrimePrint Hero section */}
       <main id="hero" data-animate style={{ backgroundImage: "linear-gradient(to bottom, rgba(6, 95, 70, 0.57), rgba(7, 62, 44, 0.76)), url('/dubai_bg.svg')", backgroundSize: "cover", backgroundPosition: "center" }} className="min-h-[70vh] md:h-screen w-full flex items-center py-16 md:py-24">
         <div className="max-w-xl sm:max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-sm font-semibold text-emerald-200 mb-2">{t.heroTag[lang]}</p>
@@ -164,17 +164,17 @@ export default function Home() {
 
             <a href="tel:+971504761587" aria-label={lang === 'ar' ? 'اتصل بنا' : 'Call us'} className="relative inline-flex items-center gap-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-4 md:px-6 py-2 md:py-3 rounded-md md:rounded-lg text-sm md:text-base lg:text-lg shadow-lg hover:shadow-2xl transform transition duration-200 hover:scale-105 active:scale-95 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300">
               <span className="absolute -z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex h-8 w-8 md:h-10 md:w-10 animate-ping rounded-full bg-cyan-400 opacity-40"></span>
-              <img src="/icons/stamp_call.png" alt="callus" className="w-5 md:w-6 h-5 md:h-6 z-10" />
+              <img src="/icons/service_call.png" alt="callus" className="w-5 md:w-6 h-5 md:h-6 z-10" />
               <span className="z-10">{t.callLabel[lang]}</span>
             </a>
           </div>
         </div>
       </main>
 
-      {/* Quick Features */}
+      {/* PrimePrint Quick Features */}
       <main data-animate className="w-full py-8 grid grid-cols-2 md:grid-cols-4 justify-center gap-4 px-4 md:px-8 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 text-gray-900">
         <div className="flex flex-col items-center justify-center md:border-r-2 border-white/30 gap-3">
-          <img src="icons/stamp-solid-full.svg" alt="custom" className="w-8 lg:w-10 h-8 lg:h-10 drop-shadow" />
+          <img src="icons/service-solid-full.svg" alt="custom" className="w-8 lg:w-10 h-8 lg:h-10 drop-shadow" />
           <p className="text-xs font-bold">{t.features[lang][0]}</p>
         </div>
         <div className="flex flex-col items-center justify-center md:border-r-2 border-white/30 gap-3">
@@ -191,24 +191,24 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Stamps Products */}
+      {/*  PrimePrint Print services */}
       <main id="products" data-animate className="w-full bg-gradient-to-b from-white to-emerald-50 py-16 flex flex-col items-center">
         <div className="w-full max-w-7xl px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-center">
-            {stamps.map((stamp, idx) => (
+            {services.map((service, idx) => (
               <Card key={idx} className="w-full shadow-lg border-2 border-emerald-100 rounded-xl transition hover:scale-105 hover:shadow-2xl hover:border-emerald-300 duration-200 bg-white">
                 <CardContent className="p-4 flex flex-col items-center">
                   <img
-                    src={stamp.image}
-                    alt={stamp.name}
+                    src={service.image}
+                    alt={service.name}
                     className="rounded-lg aspect-square bg-gray-100 mb-3 w-32 h-32 md:w-40 md:h-40 object-cover"
                   />
-                  <CardTitle className="text-lg font-semibold mb-1 text-gray-800">{stamp.name}</CardTitle>
+                  <CardTitle className="text-lg font-semibold mb-1 text-gray-800">{service.name}</CardTitle>
                   <CardDescription className="text-sm mb-3 text-gray-600 text-center">
-                    Size: {stamp.size} | Type: {stamp.type}
+                    {/* Size: {service.size} | Type: {service.type} */}
                   </CardDescription>
                   <Button
-                    onClick={() => sendToWhatsApp(stamp.image, stamp.name, stamp.size, stamp.type, stamp.price)}
+                    onClick={() => sendToWhatsApp(service.image, service.name, service.size, service.type, service.price)}
                     size="sm"
                     className="text-xs w-full px-3 py-2 h-9 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white rounded-lg shadow transition duration-200 font-semibold"
                   >
@@ -222,7 +222,7 @@ export default function Home() {
       </main>
 
       {/* Other Services */}
-      <main id="services" data-animate
+      <main id="other_services" data-animate
         style={{
           backgroundImage: "linear-gradient(to bottom, rgba(240, 253, 250, 0.98), rgba(204, 251, 241, 0.76)), url('/prints.svg')",
           backgroundSize: "cover",
@@ -234,11 +234,11 @@ export default function Home() {
             Discover Our Other Services
           </h1>
           <h4 className="text-[10px] lg:text-xl font-extrabold italic text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-teal-700 to-cyan-700">
-            Beyond Stamps: Creative Solutions for Your Business
+            Beyond services: Creative Solutions for Your Business
           </h4>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center p-5 lg:p-12 mb-5 gap-6 lg:gap-20">
-          {services.map((service, idx) => (
+          {otherservices.map((service, idx) => (
             <div className="relative" key={idx}>
               <div
                 style={{

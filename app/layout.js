@@ -10,7 +10,7 @@ const inter = Inter({
 
 
 export const metadata = {
-  title: "All print services in United Arab Emirates(UAE)",
+  title: "Prime Print Services in UAE",
   description: "Discover rare collectible new landscape.",
   keywords: ["primeprint, printservices, primeprints, print_services_uae, uae, print services, Business cards, bill books, T-shirts, leaflets, banners, gold foiling, stickers, diaries, boxes, signboards, screen & digital printing, labels, offset and shopping bags printing services in UAE."],
   openGraph: {
