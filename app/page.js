@@ -164,7 +164,7 @@ export default function Home() {
 
             <a href="tel:+971504761587" aria-label={lang === 'ar' ? 'اتصل بنا' : 'Call us'} className="relative inline-flex items-center gap-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-4 md:px-6 py-2 md:py-3 rounded-md md:rounded-lg text-sm md:text-base lg:text-lg shadow-lg hover:shadow-2xl transform transition duration-200 hover:scale-105 active:scale-95 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300">
               <span className="absolute -z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex h-8 w-8 md:h-10 md:w-10 animate-ping rounded-full bg-cyan-400 opacity-40"></span>
-              <img src="/icons/service_call.png" alt="callus" className="w-5 md:w-6 h-5 md:h-6 z-10" />
+              <img src="/icons/callus.png" alt="callus" className="w-5 md:w-6 h-5 md:h-6 z-10" />
               <span className="z-10">{t.callLabel[lang]}</span>
             </a>
           </div>
