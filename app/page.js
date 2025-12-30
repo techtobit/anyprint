@@ -174,7 +174,7 @@ export default function Home() {
       {/* PrimePrint Quick Features */}
       <main data-animate className="w-full py-8 grid grid-cols-2 md:grid-cols-4 justify-center gap-4 px-4 md:px-8 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 text-gray-900">
         <div className="flex flex-col items-center justify-center md:border-r-2 border-white/30 gap-3">
-          <img src="icons/service-solid-full.svg" alt="custom" className="w-8 lg:w-10 h-8 lg:h-10 drop-shadow" />
+          <img src="icons/custom_print.svg" alt="custom print design" className="w-8 lg:w-10 h-8 lg:h-10 drop-shadow" />
           <p className="text-xs font-bold">{t.features[lang][0]}</p>
         </div>
         <div className="flex flex-col items-center justify-center md:border-r-2 border-white/30 gap-3">
@@ -190,6 +190,7 @@ export default function Home() {
           <p className="text-xs font-bold">{t.features[lang][3]}</p>
         </div>
       </main>
+
 
       {/*  PrimePrint Print services */}
       <main id="products" data-animate className="w-full bg-gradient-to-b from-white to-emerald-50 py-16 flex flex-col items-center">
