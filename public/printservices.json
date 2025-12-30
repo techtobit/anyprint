@@ -6,11 +6,11 @@
 		"image": "image/stamp01.jpg"
 	},
 	{
-		"name": "Hand Bag Logo",
+		"name": "Card",
 		"price": 30.0,
 		"size": "45x45mm",
 		"type": "Paper Bag Series",
-		"image": "image/hand_bag_logo.webp"
+		"image": "image/card.png"
 	},
 	{
 		"name": "Hand Bag Jute",

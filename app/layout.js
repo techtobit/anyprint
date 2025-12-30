@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
 const inter = Inter({
@@ -11,18 +12,18 @@ const inter = Inter({
 export const metadata = {
   title: "All print services in United Arab Emirates(UAE)",
   description: "Discover rare collectible new landscape.",
-  keywords: ["Business cards, bill books, T-shirts, leaflets, banners, gold foiling, stickers, diaries, boxes, signboards, screen & digital printing, labels, offset and shopping bags printing services in UAE."],
+  keywords: ["primeprint, printservices, primeprints, print_services_uae, uae, print services, Business cards, bill books, T-shirts, leaflets, banners, gold foiling, stickers, diaries, boxes, signboards, screen & digital printing, labels, offset and shopping bags printing services in UAE."],
   openGraph: {
     title: "Rare Print Services in UAE",
-    description: "An exclusive online portfolio of collectible stamps.",
-    url: "https://www.mystampsite.com",
-    siteName: "anyprint",
+    description: "An exclusive online portfolio of collectible print services.",
+    url: "https://primeprint.ae/",
+    siteName: "primeprint",
     images: [
       {
-        url: "/og-image.png",
+        url: "/icons/primeprint_logo.png",
         width: 1200,
         height: 630,
-        alt: "Rare Stamp Collection",
+        alt: "Prime Print Logo",
       },
     ],
     type: "website",
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
         className={`${inter.variable}  antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

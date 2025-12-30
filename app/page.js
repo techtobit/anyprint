@@ -32,7 +32,7 @@ export default function Home() {
 
   // simple translations
   const t = {
-    brand: { en: 'AnyPrint - Emirates', ar: 'أني برينت - الإمارات' },
+    brand: { en: 'PrimePrint', ar: 'برايم برينت' },
     nav: { en: ['Home', 'Services', 'Products', 'Contact', 'WhatsApp'], ar: ['الرئيسية', 'الخدمات', 'المنتجات', 'اتصل', 'واتساب'] },
     heroTag: { en: 'Business Printing · Packaging · Branding', ar: 'الطباعة التجارية · التغليف · العلامة التجارية' },
     heroTitle: { en: 'End-to-end Printing Solutions for Businesses', ar: 'حلول الطباعة المتكاملة للشركات' },
@@ -57,7 +57,7 @@ export default function Home() {
       ]
     },
     contactUs: { en: 'Contact Us Anytime', ar: 'تواصل معنا في أي وقت' },
-    footerCopy: { en: `© ${new Date().getFullYear()} Emirates Printworks. All rights reserved`, ar: `© ${new Date().getFullYear()} الإمارات للطباعة. جميع الحقوق محفوظه` }
+    footerCopy: { en: `© ${new Date().getFullYear()} Emirates PrimePrint. All rights reserved`, ar: `© ${new Date().getFullYear()} جميع الحقوق محفوظة لشركة الإمارات برايم برينت.` }
   };
 
   // Testimonials slider state
@@ -95,7 +95,7 @@ export default function Home() {
   }, [testimonials.length]);
 
   useEffect(() => {
-    fetch("/stamps.json")
+    fetch("/printservices.json")
       .then((res) => res.json())
       .then((data) => setStamps(data));
   }, []);
