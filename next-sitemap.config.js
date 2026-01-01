@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://www.mystampsite.com", // your domain
+  siteUrl: "https://primeprint.ae/",
   generateRobotsTxt: true,
   sitemapSize: 7000,
 }

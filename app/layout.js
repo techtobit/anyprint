@@ -7,6 +7,23 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "PrintingService",
+      name: "Prime Print UAE",
+      url: "https://primeprint.ae",
+      areaServed: "AE",
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "Customer Support",
+        email: "info@primeprint.ae",
+      },
+    }),
+  }}
+/>
 
 
 export const metadata = {

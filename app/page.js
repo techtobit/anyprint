@@ -126,11 +126,9 @@ export default function Home() {
 
   const sendToWhatsApp = (image, name, size, type, price) => {
     const phone = "971504761587";
-    const message = `Hello, I am interested in:
-  Image: ${image}
-  Name: ${name}
-  Type: ${type}
-  Please provide more details.`;
+    const message = `Hello,
+    I visited your website and I would like to know more about "${name}" printing services.
+    Please assist me.`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
