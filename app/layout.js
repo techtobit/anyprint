@@ -7,7 +7,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-<script
+export const SEO=<script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
@@ -19,7 +19,7 @@ const inter = Inter({
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "Customer Support",
-        email: "info@primeprint.ae",
+        email: "admin@primeprint.ae",
       },
     }),
   }}
