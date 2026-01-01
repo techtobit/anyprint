@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/card"
 import { useEffect, useState, useRef } from "react";
 import Navbar from "@/components/ui/navbar";
+import { LoaderCircleIcon } from "lucide-react";
+
 
 export default function Home() {
   const [services, setservices] = useState([]);
@@ -157,7 +159,7 @@ export default function Home() {
               className="flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-4 md:px-6 py-2 md:py-3 rounded-md md:rounded-lg text-sm md:text-base lg:text-lg shadow-md hover:shadow-lg transition duration-200 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
             >
               <img src="/icons/whatsapp.png" alt="WhatsApp" className="w-5 md:w-6 h-5 md:h-6" />
-              <span className="leading-tight">{t.nav[lang][4]}</span>
+              <span className="leading-tight">{t.nav[lang][6]}</span>
             </a>
 
             <a href="tel:+971504761587" aria-label={lang === 'ar' ? 'اتصل بنا' : 'Call us'} className="relative inline-flex items-center gap-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-4 md:px-6 py-2 md:py-3 rounded-md md:rounded-lg text-sm md:text-base lg:text-lg shadow-lg hover:shadow-2xl transform transition duration-200 hover:scale-105 active:scale-95 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300">
@@ -193,6 +195,12 @@ export default function Home() {
       {/*  PrimePrint Print services */}
       <main id="products" data-animate className="w-full bg-gradient-to-b from-white to-emerald-50 py-16 flex flex-col items-center">
         <div className="w-full max-w-7xl px-4">
+          {services.length === 0 && (
+            <div className="w-full h-95 flex flex-col justify-center items-center">
+              <LoaderCircleIcon className="animate-spin w-14 h-14 text-emerald-500" />
+              <span className="text-gray-500 ml-2">Loading services...</span>
+            </div>
+          )}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-center">
             {services.map((service, idx) => (
               <Card key={idx} className="w-full shadow-lg border-2 border-emerald-100 rounded-xl transition hover:scale-105 hover:shadow-2xl hover:border-emerald-300 duration-200 bg-white">
@@ -373,17 +381,20 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full flex flex-wrap items-center justify-between bg-gradient-to-l from-emerald-600 to-teal-600 text-white px-8 gap-4 py-6">
+      <footer className="w-full relative flex flex-wrap items-center justify-between bg-gradient-to-l from-emerald-600 to-teal-600 text-white px-8 gap-4 py-6">
         <div className="flex flex-wrap gap-2">
           <p className="text-sm">{t.footerCopy[lang]}</p>
           <span className="text-sm">| Developed by <a className="text-cyan-200 italic font-semibold hover:text-white" href='https://ashrafuddin.vercel.app/' target="_blank">TTB</a></span>
         </div>
         <div className="flex gap-5">
-          <a href="/privacy_policy.html" className="text-sm hover:text-cyan-200 transition">Privacy Policy</a>
-          <a href="/terms_and_conditions.html" className="text-sm hover:text-cyan-200 transition">Terms & Conditions</a>
+          <a href="/privacy-policy" className="text-sm hover:text-cyan-200 transition">Privacy Policy</a>
+          <a href="/terms_conditions" className="text-sm hover:text-cyan-200 transition">Terms & Conditions</a>
         </div>
         <div>
           <img src="payment_methods.png" alt="Payment Methods" className="w-auto h-12" />
+        </div>
+        <div className="w-10 lg:w-14 h-10 lg:h-14 flex items-center absolute rounded-full shadow-lg hover:scale-110 shadow-black-500/50 bottom-44 lg:bottom-20 right-42 lg:right-10 cursor-pointer bg-white" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} title={lang === 'ar' ? 'الذهاب إلى الأعلى' : 'Go to top'}>
+          <img src="/icons/arrow-up.svg" className=""></img>
         </div>
       </footer>
     </>
