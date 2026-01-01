@@ -33,7 +33,7 @@ export default function Home() {
   // simple translations
   const t = {
     brand: { en: 'Prime Print', ar: 'برايم برينت' },
-    nav: { en: ['Home', 'Services', 'Products', 'Contact', 'WhatsApp'], ar: ['الرئيسية', 'الخدمات', 'المنتجات', 'اتصل', 'واتساب'] },
+    nav: { en: ['Home', 'Services', 'Products', 'Testimonials', 'Faq', 'Contact', 'WhatsApp'], ar: ['الرئيسية', 'الخدمات', 'التعليمات', 'التعليمات', 'المنتجات', 'اتصل', 'واتساب'] },
     heroTag: { en: 'Business Printing · Packaging · Branding', ar: 'الطباعة التجارية · التغليف · العلامة التجارية' },
     heroTitle: { en: 'End-to-end Printing Solutions for Businesses', ar: 'حلول الطباعة المتكاملة للشركات' },
     heroSubtitle: { en: 'Business cards, bill books, T-shirts, leaflets, banners, gold foiling, stickers, diaries, boxes, signboards, screen & digital printing, labels, offset and shopping bags — volume discounts, expert prepress and express delivery across the UAE.', ar: 'بطاقات أعمال، دفاتر فواتير، تي شيرتات، مناشير، لافتات، تذهيب ذهبي، ملصقات، دفاتر يومية، تغليف وعلب، لوحات إعلانية، طباعة سلكية ورقمية، ملصقات، أوفست وحقائب تسوق — خصومات للطلب بالجملة، تحضير مدقق للطباعة وتسليم سريع في جميع أنحاء الإمارات.' },
