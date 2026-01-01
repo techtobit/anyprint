@@ -9,6 +9,7 @@ import {
 import { useEffect, useState, useRef } from "react";
 import Navbar from "@/components/ui/navbar";
 import { LoaderCircleIcon } from "lucide-react";
+import { CountingNumber } from "@/components/ui/shadcn-io/counting-number";
 
 
 export default function Home() {
@@ -152,7 +153,7 @@ export default function Home() {
           <p className="text-sm sm:text-base md:text-lg text-white/90 mb-6">{t.heroSubtitle[lang]}</p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
             <a
-              href={`https://wa.me/971504761587?text=${encodeURIComponent(lang === 'ar' ? 'مرحبًا، أحتاج عرض سعر للطباعة (مثال: بطاقات أعمال، لافتات، تي شيرتات). الشركة: [اسم الشركة]. الكمية/المواصفات: [الكمية/التفاصيل].' : 'Hello, I need a quote for printing (e.g., Business Cards, Banners, T-Shirts). Company: [Your Company]. Quantity/Specs: [Qty/Details].')}`}
+              href={`https://wa.me/971504761587?text=${encodeURIComponent(lang === 'ar' ? 'مرحباً،لقد زرت موقعكم الإلكتروني وأحتاج إلى خدمات الطباعة.أرجو مساعدتي.' : "Hello, \nI visited your website and I need printing services Please assist me.")}`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={lang === 'ar' ? 'فتح واتساب' : 'Open WhatsApp'}
@@ -362,21 +363,33 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-center gap-2 lg:border-r-2 border-white/40">
-          <p className="text-3xl flex flex-col">78+
-            <span className="text-sm font-semibold">Happy Customer</span>
-          </p>
+          <CountingNumber
+            number={78}
+            inView={true}
+            transition={{ stiffness: 100, damping: 30 }}
+            className="text-3xl flex flex-col"
+          />
+          <span className="text-sm font-semibold">Happy Customer</span>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-2 lg:border-r-2 border-white/40">
-          <p className="text-3xl flex flex-col">07+
-            <span className="text-sm font-semibold">Locations</span>
-          </p>
+          <CountingNumber
+            number={7}
+            inView={true}
+            transition={{ stiffness: 100, damping: 30 }}
+            className="text-3xl flex flex-col"
+          />
+          <span className="text-sm font-semibold">Locations</span>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-2">
-          <p className="text-3xl flex flex-col">19+
-            <span className="text-sm font-semibold">Services</span>
-          </p>
+          <CountingNumber
+            number={21}
+            inView={true}
+            transition={{ stiffness: 100, damping: 30 }}
+            className="text-3xl flex flex-col"
+          />
+          <span className="text-sm font-semibold">Services</span>
         </div>
       </main>
 

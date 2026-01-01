@@ -61,6 +61,7 @@ export default function RootLayout({ children }) {
       >
         {children}
         <Analytics />
+        {SEO}
       </body>
     </html>
   );

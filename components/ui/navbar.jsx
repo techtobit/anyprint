@@ -20,7 +20,7 @@ export default function Navbar({ t, lang, setLang }) {
             <a href="#testimonials" className="text-sm font-medium text-gray-700 hover:text-green-700">{t.nav[lang][3]}</a>
             <a href="#faq" className="text-sm font-medium text-gray-700 hover:text-green-700">{t.nav[lang][4]}</a>
             <a href="#contact" className="text-sm font-medium text-gray-700 hover:text-green-700">{t.nav[lang][5]}</a>
-            <a href={`https://wa.me/971504761587?text=${encodeURIComponent(lang === 'ar' ? 'مرحبًا، أريد عرض سعر لطلبات بالجملة.' : 'Hello, I need a bulk quote for custom stamps.')}`} className="ml-2 inline-flex items-center gap-2 px-3 py-1 rounded-md bg-green-500 text-white text-sm">{t.nav[lang][6]}</a>
+            <a href={`https://wa.me/971504761587?text=${encodeURIComponent(lang === 'ar' ? 'مرحباً،لقد زرت موقعكم الإلكتروني وأحتاج إلى خدمات الطباعة.أرجو مساعدتي.' : "Hello, \n I visited your website and I need printing services Please assist me.")}`} className="ml-2 inline-flex items-center gap-2 px-3 py-1 rounded-md bg-green-500 text-white text-sm">{t.nav[lang][6]}</a>
 
             {/* Language switcher */}
             <div className="flex items-center gap-2 ml-2 relative">
